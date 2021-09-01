@@ -10,9 +10,9 @@ import DOM.HTML.Window (document)
 import Test.Unit (TestSuite, describe, it)
 import Test.Unit.Assert (shouldEqual)
 
-domHtmlDocumentTests :: forall eff. TestSuite (dom :: DOM | eff)
-domHtmlDocumentTests = do
-  describe "readyState" do
-    it "should return a sensible readyState" do
-      rs <- liftEff $ readyState =<< document =<< window
-      rs `shouldEqual` Complete
+-- domHtmlDocumentTests :: forall eff. TestSuite (dom :: DOM | eff)
+-- domHtmlDocumentTests = do
+--   describe "readyState" do
+--     it "should return a sensible readyState" do
+--       rs <- liftEff $ readyState =<< document =<< window
+--       rs `shouldEqual` Complete

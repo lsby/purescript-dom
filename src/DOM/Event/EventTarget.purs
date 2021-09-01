@@ -2,9 +2,10 @@ module DOM.Event.EventTarget where
 
 import Prelude
 import Control.Monad.Eff (kind Effect, Eff)
-import Control.Monad.Eff.Exception (EXCEPTION)
 import DOM (DOM)
 import DOM.Event.Types (EventTarget, Event, EventType)
+
+foreign import data EXCEPTION :: Effect
 
 -- | A boxed function that can be used as an event listener. This is necessary
 -- | due to the underlying implementation of Eff functions.
